@@ -54,6 +54,8 @@ normal users normally do not need any write access. Putting this
 directory on a dedicated device allows administrators to configure it as
 a read-only mount.
 
+ ---
+ More Notes : 
 Apart from these directories, you may find servers that have other
 directories that are mounted on dedicated partitions or volumes also. After all, it is up to the discretion of the administrator to decide which directories
 get their own dedicated devices.
@@ -63,4 +65,4 @@ different commands:
 get this information, the /proc/mounts file is read, where the kernel
 keeps information about all current mounts. It shows kernel interfaces
 also, which may lead to a long list of mounted devices being
-displayed. Example 3-1 shows sample output of this command.
+displayed.
