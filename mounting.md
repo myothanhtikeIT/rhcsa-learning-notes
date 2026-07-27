@@ -66,3 +66,5 @@ get this information, the /proc/mounts file is read, where the kernel
 keeps information about all current mounts. It shows kernel interfaces
 also, which may lead to a long list of mounted devices being
 displayed.
+---
+Basically loaded Devices to the directory tree. 
