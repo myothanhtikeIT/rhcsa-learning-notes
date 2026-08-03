@@ -503,9 +503,9 @@ ls a?*
 ls [a-e]*
 ```
 - Other types of expansion also exist, 
-    brace expansion : touch file {1..9}
+    brace expansion : touch file{1..9}
     tide expansion : cd~
     command substitution : ls -l $(which ls)
     variable substitution : echo $PATH
-    
+
 

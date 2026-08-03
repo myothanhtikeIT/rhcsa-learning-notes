@@ -353,5 +353,25 @@ Exit Status:
  means 'NOT'
 
  ---
+ #Some Basic Scripts
+ #!/bin/bash
 
+- Capture command outputs into variables
+MACHINE=$(hostname)
+USER_NAME=$(whoami)
 
+- Print the formatted output
+echo "Running on: $MACHINE"
+echo "As user: $USER_NAME"
+
+Output on the host Debian machine 
+```bash
+strygwyr@debian:~/Documents/syseng-notes/testscripts$ bash hello.sh
+Running on: debian
+As user: strygwyr
+```
+
+The ```$()``` syntax is called command substitution.It runs the command inside the parentheses, captures whatever it prints to stdout, and hands that value to the variable.
+
+- bash hello.sh explicitly calls bash to interpret it, ignoring the shebang. ```./hello.sh``` uses the shebang to decide the interpreter. On the exam, it's a good habbit to use use ```./```
+---
