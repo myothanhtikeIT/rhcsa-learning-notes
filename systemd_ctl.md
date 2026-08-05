@@ -22,5 +22,39 @@ However, for most troubleshoting knowledge, only need to care about the main boo
 - emergency.target: Bare-minimum root shell used when the system fails to boot cleanly.
 - reboot.target: Orchestrates the shutdown and restart process.
 - poweroff.target: Orchestrates complete system shutdown.
+## useful hands on commands
+```systemctl list-units --type=target```
+to list all targets currently active on the machine
 
+---
 # What's systemd
+## systemd (The Manager)
+
+When a Linux machine turns on, the Linux kernel boots up and spawns a single master process with Process ID 1 (PID 1). 
+That process is systemd.
+It acts as the general manager of the entire operating system. 
+handles:
+- Starting background services in parallel during boot so startup is fast
+- Monitoring processes and restarting them automatically if they crash
+- Managing network connections, mounting drive filesystems, and handling targets
+- Windows world equivalent: Fusing the Windows Service Control Manager (services.msc), Task Scheduler, and Device Manager into one engine.
+---
+# what is systemctl
+when systemd runs quietly in the background, the admin cannot interact with it directly. admin would need a command line utility to send instructions to it.
+that particular utility is known as systemctl (short for system control). 
+Whenever you want to start, stop, or check on a background program, you use systemctl.
+Windows equivalent would be typing ```net start or opening services.msc``` to click Start, Stop, or Restart on a service.
+### Common hands on commands
+```systemctl status ssh```
+ check if the SSH service is currently running.
+```systemctl start ssh```
+ turn on the SSH service immediately.
+```systemctl stop ssh```
+ turn off the SSH service immediately.
+```systemctl enable ssh```
+ set SSH to launch automatically every time the system boots (like Windows Startup apps).
+```systemctl disable ssh```
+ stop SSH from automatically launching on boot.
+ 
+ ---
+
