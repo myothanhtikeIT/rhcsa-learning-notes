@@ -68,3 +68,4 @@ If a Linux OS would be a restaurant and you are a owner.
 - Services like SSH or Web Servers would be The Waiters, the actual (workers) background processes performing specific tasks for users and network connections.
 
 - systemctl would be the The Manager's Walkie-Talkie, you are the restaurant owner. You do not speak directly to systemd or the kernel. Instead, you pick up systemctl to tell the manager what to do ("Start SSH", "Reload the config", "Change to multi-user mode") and s o on.  :)
+---
